@@ -8,7 +8,7 @@ const overlay = document.querySelector(".overlay");
 const newGame = document.querySelector(".newGame");
 const play = document.querySelector(".play");
 const select = document.querySelector(".select");
-
+const reslut = document.querySelector(".result");
 let timer = 10;
 let userScore = 0;
 inputText.focus();
@@ -34,6 +34,7 @@ function interval() {
     if (timer == 0) {
       modal.style.display = "grid";
       overlay.style.display = "block";
+      reslut.textContent = "Score:" + score.textContent;
     }
   }, 1000);
 }
